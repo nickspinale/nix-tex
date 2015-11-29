@@ -2,6 +2,8 @@
 
 source $stdenv/setup
 
-tar xvf $src
+tar xf $src
 
-ls
+mkdir wat
+cd wat
+TL_INSTALL_DEST=$out TL_CONFIGURE_ARGS="--without-x" ../texlive-20150521-source/Build
