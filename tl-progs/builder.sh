@@ -1,5 +1,3 @@
-#!/bin/sh
-
 source $stdenv/setup
 
 tar xf $src
