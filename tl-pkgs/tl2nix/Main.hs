@@ -26,7 +26,7 @@ type MD5 = String
 data Entry = Entry String String [String] deriving Show
 
 buildPackage :: Package -> Builder
-buildPackage (Package name (PkgBody{..})) = (mconcat $ map ((indent <>) . (<> char7 '\n')) lines)
+buildPackage (Package name (PkgBody{..})) = mconcat $ map ((indent <>) . (<> char7 '\n')) lines
   where
     indent = string7 "  "
     equals = string7 " = "
@@ -93,7 +93,7 @@ toPackage _ = Nothing
 
 main :: IO ()
 main = do
-    putStrLn "tl: {"
+    putStrLn "{"
     getPackages (Partial (parse package))
     putStrLn "}"
   where

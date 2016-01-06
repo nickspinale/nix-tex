@@ -1,7 +1,7 @@
-tl: {
+{
   "00texlive.config" = {
     relocated = false;
-    deps = ["container_format/xz" "container_split_doc_files/1" "container_split_src_files/1" "minrelease/2013" "release/2015" "revision/39267" ];
+    deps = ["container_format/xz" "container_split_doc_files/1" "container_split_src_files/1" "minrelease/2013" "release/2015" "revision/39273" ];
   };
   "00texlive.image" = {
     relocated = false;
@@ -5194,8 +5194,8 @@ tl: {
   "cmcyr" = {
     relocated = true;
     deps = [];
-    md5.default = "afb9c91eaf8eef9abf276ac79b769327";
-    md5.doc = "fdea34f609f85011712fdd5807b41b1f";
+    md5.default = "828daa751fadb4346fdb612da90fbf83";
+    md5.doc = "069b773a6dfe69c051e528f4810432a6";
   };
   "cmdstring" = {
     relocated = true;
@@ -33217,8 +33217,8 @@ tl: {
   "unicode-data" = {
     relocated = true;
     deps = [];
-    md5.default = "150b88b636580a30e7cffd42c3771df4";
-    md5.doc = "2e78f808973ef1dbd3a8275abf3b9999";
+    md5.default = "f17005b3842a6ac20fafc15f93066537";
+    md5.doc = "21274860760e70a7d90ff4bdfa5c22e2";
   };
   "unicode-math" = {
     relocated = true;
