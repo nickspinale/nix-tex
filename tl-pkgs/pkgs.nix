@@ -1,4 +1,4 @@
-{
+arch: {
   "00texlive.config" = {
     relocated = false;
     deps = ["container_format/xz" "container_split_doc_files/1" "container_split_src_files/1" "minrelease/2013" "release/2015" "revision/39273" ];
@@ -115,7 +115,7 @@
   };
   "a2ping" = {
     relocated = false;
-    deps = ["a2ping.ARCH" ];
+    deps = ["a2ping.${arch}" ];
     md5.default = "d2e79e57ec8f5584429aa34c7e4edcc2";
     md5.doc = "ffb890ea5e2e62862967d1116fc0178e";
   };
@@ -285,7 +285,7 @@
   };
   "accfonts" = {
     relocated = false;
-    deps = ["accfonts.ARCH" ];
+    deps = ["accfonts.${arch}" ];
     md5.default = "56f887a8214fde8c96d80cf4b8fc5fe5";
     md5.doc = "0ba53c1bf9892cc52f8a606c79023256";
   };
@@ -459,7 +459,7 @@
   };
   "adhocfilelist" = {
     relocated = false;
-    deps = ["adhocfilelist.ARCH" ];
+    deps = ["adhocfilelist.${arch}" ];
     md5.default = "2526a1a38aeed76a0b2029567a9bf82f";
     md5.src = "645ba3d2c4ef077349e8debe550530af";
     md5.doc = "d3e0b23140f32c6655f0cf3ded20ef78";
@@ -607,7 +607,7 @@
   };
   "afm2pl" = {
     relocated = false;
-    deps = ["afm2pl.ARCH" ];
+    deps = ["afm2pl.${arch}" ];
     md5.default = "538b5d7c1dd0003ca4215061612f71fe";
     md5.doc = "7b73f3185cb9b4e32d6de9c19077ae27";
   };
@@ -762,7 +762,7 @@
   };
   "aleph" = {
     relocated = false;
-    deps = ["latex" "plain" "lambda" "aleph.ARCH" ];
+    deps = ["latex" "plain" "lambda" "aleph.${arch}" ];
     md5.default = "8dc80bcba5581cb513ecd8bb2a470554";
     md5.doc = "976d329495d5bc762c9a5f952d814392";
   };
@@ -1000,7 +1000,7 @@
   };
   "amstex" = {
     relocated = false;
-    deps = ["tex" "amstex.ARCH" ];
+    deps = ["tex" "amstex.${arch}" ];
     md5.default = "5f84ae46e1dfe1ede714492daa8758f4";
     md5.doc = "fc9c04a704792236242fe8ebcd9d1eb1";
   };
@@ -1280,7 +1280,7 @@
   };
   "arara" = {
     relocated = false;
-    deps = ["arara.ARCH" ];
+    deps = ["arara.${arch}" ];
     md5.default = "8f716ac4f48aeb47731932c4a1c4c5ab";
     md5.src = "7501267a24c4f0eae44c43556f13c7f5";
     md5.doc = "92b74db241e34b75e95e1bcf6cbea6dd";
@@ -1529,7 +1529,7 @@
   };
   "asymptote" = {
     relocated = false;
-    deps = ["asymptote.ARCH" ];
+    deps = ["asymptote.${arch}" ];
     md5.default = "d945894f1680d95fcadb84f1b273a7e1";
     md5.doc = "95052536fe64473ad0a79dc03bc84650";
   };
@@ -1657,7 +1657,7 @@
   };
   "authorindex" = {
     relocated = false;
-    deps = ["authorindex.ARCH" ];
+    deps = ["authorindex.${arch}" ];
     md5.default = "11d2c5c02fa806395fc15995b8451edd";
     md5.doc = "95c6bc744b311846b4e9e6767c386840";
   };
@@ -2566,7 +2566,7 @@
   };
   "biber" = {
     relocated = false;
-    deps = ["biber.ARCH" ];
+    deps = ["biber.${arch}" ];
     md5.default = "74c16822954a97a1bdf636090362e1c7";
     md5.src = "f045bd8606953ef8af4bc0b04016fc17";
     md5.doc = "a19fefe34a270db8ed84c38cea1ef269";
@@ -2628,7 +2628,7 @@
   };
   "bibexport" = {
     relocated = false;
-    deps = ["bibexport.ARCH" ];
+    deps = ["bibexport.${arch}" ];
     md5.default = "c11bd02f170c332d28513b4b22c87dcb";
     md5.src = "221b8f19bb6cd633ac6ab42d46225bfd";
     md5.doc = "3df60995c33501b1f8d10db15390d4a3";
@@ -2970,7 +2970,7 @@
   };
   "bibtex" = {
     relocated = false;
-    deps = ["kpathsea" "bibtex.ARCH" ];
+    deps = ["kpathsea" "bibtex.${arch}" ];
     md5.default = "0d4e202b06e1e31df01aba0c56167916";
     md5.doc = "cc4abfe00620b85402df6433e1b19bc6";
   };
@@ -3071,7 +3071,7 @@
   };
   "bibtex8" = {
     relocated = false;
-    deps = ["bibtex8.ARCH" ];
+    deps = ["bibtex8.${arch}" ];
     md5.default = "dceefa85bc814e74a63468e49a40f6a9";
     md5.doc = "21bf8865832ea7bc3ced552d58563605";
   };
@@ -3179,7 +3179,7 @@
   };
   "bibtexu" = {
     relocated = false;
-    deps = ["bibtexu.ARCH" ];
+    deps = ["bibtexu.${arch}" ];
     md5.default = "abd520c3c443eddae0ac23cd497bcb99";
     md5.doc = "001bf759f93aa06aaa27b0482b51fa8e";
   };
@@ -3708,7 +3708,7 @@
   };
   "bundledoc" = {
     relocated = false;
-    deps = ["bundledoc.ARCH" ];
+    deps = ["bundledoc.${arch}" ];
     md5.default = "bd4ca5e2cdd88404ea5b702ff9aefea2";
     md5.doc = "1dc1cb65c83e85a356ca9a150b7d4079";
   };
@@ -3885,7 +3885,7 @@
   };
   "cachepic" = {
     relocated = false;
-    deps = ["cachepic.ARCH" ];
+    deps = ["cachepic.${arch}" ];
     md5.default = "a3e16ea7e53e8147c197b2becba99d1b";
     md5.doc = "6edae09664eec0921bfc080693aaacce";
   };
@@ -4332,7 +4332,7 @@
   };
   "checkcites" = {
     relocated = false;
-    deps = ["checkcites.ARCH" ];
+    deps = ["checkcites.${arch}" ];
     md5.default = "cf8bad73e06631a094e044f2a5b88c74";
     md5.doc = "e4f570187d30c6768ce2e48a8151a88a";
   };
@@ -4433,7 +4433,7 @@
   };
   "checklistings" = {
     relocated = false;
-    deps = ["checklistings.ARCH" ];
+    deps = ["checklistings.${arch}" ];
     md5.default = "286f2b578d2170d1fd8d86e6bb7eb29a";
     md5.src = "0a0b15871bd61d03e8cbb60da2617b7e";
     md5.doc = "28ed924de164f42c59b8915b8ef1578d";
@@ -4682,7 +4682,7 @@
   };
   "chktex" = {
     relocated = false;
-    deps = ["chktex.ARCH" ];
+    deps = ["chktex.${arch}" ];
     md5.default = "8263d8aeff53dacb7214615f53e025db";
     md5.doc = "af7647d92330fec771061ed9c2b51b44";
   };
@@ -4859,7 +4859,7 @@
   };
   "cjk-gs-integrate" = {
     relocated = false;
-    deps = ["cjk-gs-integrate.ARCH" ];
+    deps = ["cjk-gs-integrate.${arch}" ];
     md5.default = "49c92346c1927716dc1260a92659f2bd";
     md5.doc = "fef242c567bc6ab57fe62d9eb7513f41";
   };
@@ -4973,7 +4973,7 @@
   };
   "cjkutils" = {
     relocated = false;
-    deps = ["cjkutils.ARCH" ];
+    deps = ["cjkutils.${arch}" ];
     md5.default = "779e43cc6c45a115975463b43e83ccf1";
     md5.doc = "2f90ffece02b7d4c19aad1513d82efcb";
   };
@@ -5763,7 +5763,7 @@
   };
   "context" = {
     relocated = false;
-    deps = ["metapost" "pdftex" "xetex" "luatex" "lm" "lm-math" "amsfonts" "manfnt-font" "mflogo-font" "stmaryrd" "mptopdf" "context.ARCH" ];
+    deps = ["metapost" "pdftex" "xetex" "luatex" "lm" "lm-math" "amsfonts" "manfnt-font" "mflogo-font" "stmaryrd" "mptopdf" "context.${arch}" ];
     md5.default = "7be9693cc8ad55c832166605d3e12103";
     md5.doc = "2f5d0617e909261c4ff54757d58f0e6e";
   };
@@ -6069,7 +6069,7 @@
   };
   "convbkmk" = {
     relocated = false;
-    deps = ["convbkmk.ARCH" ];
+    deps = ["convbkmk.${arch}" ];
     md5.default = "3ca33526f07a2434f3393a77ff16aa37";
     md5.doc = "2d7ff3db59ebefb9d4fa7ecf62d5d880";
   };
@@ -6321,7 +6321,7 @@
   };
   "crossrefware" = {
     relocated = false;
-    deps = ["crossrefware.ARCH" ];
+    deps = ["crossrefware.${arch}" ];
     md5.default = "81c4d48256d45911281837b8eb18f8d2";
     md5.doc = "a6573d4c35cb757cba7b82c463bda453";
   };
@@ -6459,7 +6459,7 @@
   };
   "cslatex" = {
     relocated = false;
-    deps = ["latex" "cslatex.ARCH" ];
+    deps = ["latex" "cslatex.${arch}" ];
     md5.default = "36ea5f9fa0669c6200336c053f1176f2";
     md5.src = "9f536c96aaf91655be4f538d81ea6b1b";
   };
@@ -6560,7 +6560,7 @@
   };
   "csplain" = {
     relocated = false;
-    deps = ["tex" "csplain.ARCH" ];
+    deps = ["tex" "csplain.${arch}" ];
     md5.default = "1403803bf8a8c4286d6b70bb36c71a79";
   };
   "csplain.alpha-linux" = {
@@ -6704,7 +6704,7 @@
   };
   "ctanify" = {
     relocated = false;
-    deps = ["ctanify.ARCH" ];
+    deps = ["ctanify.${arch}" ];
     md5.default = "6925d1b6cd4caefa4762a75d5f8b9838";
     md5.doc = "06a73fb21c805b045783c8304978116d";
   };
@@ -6805,7 +6805,7 @@
   };
   "ctanupload" = {
     relocated = false;
-    deps = ["ctanupload.ARCH" ];
+    deps = ["ctanupload.${arch}" ];
     md5.default = "85282f7f4e8b0fdb0830a4f4cd4a4e3f";
     md5.doc = "c8cfabc1d6d4825fa7a53a19e64e6b7d";
   };
@@ -6926,7 +6926,7 @@
   };
   "ctie" = {
     relocated = false;
-    deps = ["kpathsea" "ctie.ARCH" ];
+    deps = ["kpathsea" "ctie.${arch}" ];
     md5.default = "179b5e624d701c48a746bde5ed95ba2d";
     md5.doc = "2116ee05b693298359ec8319865a81f7";
   };
@@ -7101,7 +7101,7 @@
   };
   "cweb" = {
     relocated = false;
-    deps = ["cweb.ARCH" ];
+    deps = ["cweb.${arch}" ];
     md5.default = "21617c876634cbfb2f43e00ff47e129b";
     md5.doc = "e86c1f5a4c158d59120cd080c55cbece";
   };
@@ -7235,7 +7235,7 @@
   };
   "cyrillic-bin" = {
     relocated = false;
-    deps = ["cyrillic-bin.ARCH" ];
+    deps = ["cyrillic-bin.${arch}" ];
     md5.default = "ab069377b167ba4a8d03d936970699af";
     md5.doc = "d8d94e3e71262c24f5be74c8be6d495a";
   };
@@ -7728,7 +7728,7 @@
   };
   "de-macro" = {
     relocated = false;
-    deps = ["de-macro.ARCH" ];
+    deps = ["de-macro.${arch}" ];
     md5.default = "5030aed456a67a2fa84d914682031d6b";
     md5.doc = "2b8fdaa0cc67a3d50cc8f93006f7cfb0";
   };
@@ -7882,7 +7882,7 @@
   };
   "detex" = {
     relocated = false;
-    deps = ["detex.ARCH" ];
+    deps = ["detex.${arch}" ];
     md5.default = "8effb453e0019b5f80d824f505383b17";
     md5.doc = "92822f41aafc022e59a52a60fc83aee2";
   };
@@ -7983,7 +7983,7 @@
   };
   "devnag" = {
     relocated = false;
-    deps = ["devnag.ARCH" ];
+    deps = ["devnag.${arch}" ];
     md5.default = "3365c387d7ec6b73ddb630daae6402e2";
   };
   "devnag.alpha-linux" = {
@@ -8090,7 +8090,7 @@
   };
   "diadia" = {
     relocated = false;
-    deps = ["diadia.ARCH" ];
+    deps = ["diadia.${arch}" ];
     md5.default = "5ba0a31af96202b6eb61dfd053ce7910";
     md5.doc = "2eded6385c9fd784da7ea9985031ab17";
   };
@@ -8391,7 +8391,7 @@
   };
   "dosepsbin" = {
     relocated = false;
-    deps = ["dosepsbin.ARCH" ];
+    deps = ["dosepsbin.${arch}" ];
     md5.default = "8692975c64bf56fd197c77f575349208";
     md5.src = "06522191e0f894694be44e9f87b60412";
     md5.doc = "9196ea30d7aabdf9e1b701a4c6ed22b2";
@@ -8658,7 +8658,7 @@
   };
   "dtl" = {
     relocated = false;
-    deps = ["dtl.ARCH" ];
+    deps = ["dtl.${arch}" ];
     md5.default = "d8ae4a35fde61fe67437fa561dd34a65";
     md5.doc = "c52b4d731d4570bd89691b47ee4e9bff";
   };
@@ -8766,7 +8766,7 @@
   };
   "dtxgen" = {
     relocated = false;
-    deps = ["dtxgen.ARCH" ];
+    deps = ["dtxgen.${arch}" ];
     md5.default = "b9ee26c792fdf78d068f02b5960b6b41";
     md5.doc = "3e43438cc2df9ec8b3fa51966ba98a61";
   };
@@ -8905,7 +8905,7 @@
   };
   "dvi2tty" = {
     relocated = false;
-    deps = ["dvi2tty.ARCH" ];
+    deps = ["dvi2tty.${arch}" ];
     md5.default = "0852c78e5e39250cb86de7b9cb516f2a";
     md5.doc = "73218ae80a68b58c9a89beb924822d5f";
   };
@@ -9006,7 +9006,7 @@
   };
   "dviasm" = {
     relocated = false;
-    deps = ["dviasm.ARCH" ];
+    deps = ["dviasm.${arch}" ];
     md5.default = "4d752fe9064062b5a355e7ab733c90c7";
     md5.doc = "2d965bf5e6e8ff6744591961b54860c8";
   };
@@ -9107,7 +9107,7 @@
   };
   "dvicopy" = {
     relocated = false;
-    deps = ["dvicopy.ARCH" ];
+    deps = ["dvicopy.${arch}" ];
     md5.default = "2d3b2b0e8753135b6a93d80ac4bfcf2d";
     md5.doc = "cd4f4b1f6acaffb09fa59995b58bf7c0";
   };
@@ -9208,7 +9208,7 @@
   };
   "dvidvi" = {
     relocated = false;
-    deps = ["dvidvi.ARCH" ];
+    deps = ["dvidvi.${arch}" ];
     md5.default = "c0430badacd175d302e44d7383df99fc";
   };
   "dvidvi.alpha-linux" = {
@@ -9314,7 +9314,7 @@
   };
   "dviljk" = {
     relocated = false;
-    deps = ["dviljk.ARCH" ];
+    deps = ["dviljk.${arch}" ];
     md5.default = "2e6abbb8f2397440280efc1e633e1c34";
     md5.doc = "a539ea61cd4f12566d3df1120cbad54a";
   };
@@ -9420,7 +9420,7 @@
   };
   "dvipdfmx" = {
     relocated = false;
-    deps = ["glyphlist" "dvipdfmx-def" "dvipdfmx.ARCH" ];
+    deps = ["glyphlist" "dvipdfmx-def" "dvipdfmx.${arch}" ];
     md5.default = "030484bee2b0e3bb98e87a8ff555c4f1";
     md5.doc = "e733f138ca37d235f811f193fd24f230";
   };
@@ -9527,7 +9527,7 @@
   };
   "dvipng" = {
     relocated = false;
-    deps = ["dvipng.ARCH" ];
+    deps = ["dvipng.${arch}" ];
     md5.default = "623bf32f7f330fe01126b01aa6430011";
     md5.doc = "60bacf265dfa1a6b31204df7445a21eb";
   };
@@ -9628,7 +9628,7 @@
   };
   "dvipos" = {
     relocated = false;
-    deps = ["dvipos.ARCH" ];
+    deps = ["dvipos.${arch}" ];
     md5.default = "728d8acd5413bac0930a065913d86176";
     md5.doc = "c121dd6210ffa911e594b55289fe6bc1";
   };
@@ -9729,7 +9729,7 @@
   };
   "dvips" = {
     relocated = false;
-    deps = ["dvips.ARCH" ];
+    deps = ["dvips.${arch}" ];
     md5.default = "3a22e8e58ad1b81e8250562d5ac505cf";
     md5.doc = "552a96276c166ff0144982cd60d38335";
   };
@@ -9835,7 +9835,7 @@
   };
   "dvisvgm" = {
     relocated = false;
-    deps = ["dvisvgm.ARCH" ];
+    deps = ["dvisvgm.${arch}" ];
     md5.default = "07da6588a1cc679eb2a2c0b192253bfc";
     md5.doc = "3e9eff8b3d2ec88511016a3729292759";
   };
@@ -10025,7 +10025,7 @@
   };
   "ebong" = {
     relocated = false;
-    deps = ["ebong.ARCH" ];
+    deps = ["ebong.${arch}" ];
     md5.default = "afc17f207ca9681e39e419ea0cf07c12";
     md5.doc = "01568bfbafdc01c98ce241696a1fdd64";
   };
@@ -10576,7 +10576,7 @@
   };
   "eplain" = {
     relocated = false;
-    deps = ["pdftex" "eplain.ARCH" ];
+    deps = ["pdftex" "eplain.${arch}" ];
     md5.default = "b82412b0e3eeb568ec33171615a2b570";
     md5.src = "c47dcf3b789c100cad57c76a7390b8aa";
     md5.doc = "031fd10fea0f77327767585ec1d24ff4";
@@ -10709,7 +10709,7 @@
   };
   "epspdf" = {
     relocated = false;
-    deps = ["epspdf.ARCH" ];
+    deps = ["epspdf.${arch}" ];
     md5.default = "d4e7daf9675013ec4ca643518416123e";
     md5.doc = "6ae44b2c17c331cb6f60db3c0f0df7d9";
   };
@@ -10816,7 +10816,7 @@
   };
   "epstopdf" = {
     relocated = false;
-    deps = ["epstopdf.ARCH" ];
+    deps = ["epstopdf.${arch}" ];
     md5.default = "9d3a0e6086865cf3fa68dcbbc20c7abe";
     md5.doc = "6d61d8e1748ed40df8233584f07df46f";
   };
@@ -11234,7 +11234,7 @@
   };
   "exceltex" = {
     relocated = false;
-    deps = ["exceltex.ARCH" ];
+    deps = ["exceltex.${arch}" ];
     md5.default = "ad1390a84219f43d8108e7cbbc016125";
     md5.doc = "4eef7853574b3831551a6fb468260d64";
   };
@@ -11685,7 +11685,7 @@
   };
   "fig4latex" = {
     relocated = false;
-    deps = ["fig4latex.ARCH" ];
+    deps = ["fig4latex.${arch}" ];
     md5.default = "af0b92401dc19389161af519c2f19bc9";
     md5.doc = "e258ef9735feadfa8cd47350305bf986";
   };
@@ -11849,7 +11849,7 @@
   };
   "findhyph" = {
     relocated = false;
-    deps = ["findhyph.ARCH" ];
+    deps = ["findhyph.${arch}" ];
     md5.default = "41be6febe4c606ebc90ce31c9758168e";
     md5.doc = "ea2045848d569abbc9959b66b67b8150";
   };
@@ -12252,7 +12252,7 @@
   };
   "fontinst" = {
     relocated = false;
-    deps = ["fontinst.ARCH" ];
+    deps = ["fontinst.${arch}" ];
     md5.default = "6a127335ab0142ace7ac91cc1e6c44d5";
     md5.src = "96b2c3975c64da1b9d4f5db18c8ac0a4";
     md5.doc = "84c590e85354cd95c7c9d322abd7710d";
@@ -12361,7 +12361,7 @@
   };
   "fontools" = {
     relocated = false;
-    deps = ["fontools.ARCH" ];
+    deps = ["fontools.${arch}" ];
     md5.default = "8307047e7d1b5d49e24307fca9c151a0";
     md5.doc = "fb5f3da8542a68520e19e519669dcf54";
   };
@@ -12483,7 +12483,7 @@
   };
   "fontware" = {
     relocated = false;
-    deps = ["fontware.ARCH" ];
+    deps = ["fontware.${arch}" ];
     md5.default = "f17519d4b882a4883f56b15cf3fa8c45";
     md5.doc = "7c77ae6a5b39836b092990daebab8689";
   };
@@ -12698,7 +12698,7 @@
   };
   "fragmaster" = {
     relocated = false;
-    deps = ["fragmaster.ARCH" ];
+    deps = ["fragmaster.${arch}" ];
     md5.default = "05f3bcf8039be5f730c5c132a191f10d";
     md5.doc = "da3da6777b8caf6089d31374343eeb30";
   };
@@ -13103,7 +13103,7 @@
   };
   "getmap" = {
     relocated = false;
-    deps = ["getmap.ARCH" ];
+    deps = ["getmap.${arch}" ];
     md5.default = "18f0e71791933df6edf627fe265edc93";
     md5.doc = "a7a561c6454304aa5bc51061d43f5b89";
   };
@@ -13326,7 +13326,7 @@
   };
   "glossaries" = {
     relocated = false;
-    deps = ["glossaries.ARCH" ];
+    deps = ["glossaries.${arch}" ];
     md5.default = "4c8117cad62c45ee239d5edf6f4a9725";
     md5.src = "c89b658a5545857bb68aa7486c6e14fd";
     md5.doc = "cad954a9df2b94c63241343bb1493c37";
@@ -13740,7 +13740,7 @@
   };
   "gsftopk" = {
     relocated = false;
-    deps = ["gsftopk.ARCH" ];
+    deps = ["gsftopk.${arch}" ];
     md5.default = "961ad080623d2675a426d66a0f3a463a";
     md5.doc = "5f01f652954df4423ae4f450dc6660f9";
   };
@@ -14817,7 +14817,7 @@
   };
   "installfont" = {
     relocated = false;
-    deps = ["installfont.ARCH" ];
+    deps = ["installfont.${arch}" ];
     md5.default = "6907ca2c75512fa8decd255c61e40ed1";
     md5.doc = "dd0874e99ae3ba097670c3009f55d784";
   };
@@ -15079,7 +15079,7 @@
   };
   "jadetex" = {
     relocated = false;
-    deps = ["latex" "passivetex" "pdftex" "tex" "jadetex.ARCH" ];
+    deps = ["latex" "passivetex" "pdftex" "tex" "jadetex.${arch}" ];
     md5.default = "d5a2fcacb3808378612edc09b3b7bc73";
     md5.src = "6209d28745ac94441666f407e2c082e1";
     md5.doc = "0c195d47587c615ddb8860a7e138d472";
@@ -15208,7 +15208,7 @@
   };
   "jfontmaps" = {
     relocated = false;
-    deps = ["jfontmaps.ARCH" ];
+    deps = ["jfontmaps.${arch}" ];
     md5.default = "a2d1a94bacc764e7d062f7aa3c2ee2d8";
     md5.src = "bb5bbde89487106f13fa92c85064ea2e";
     md5.doc = "84f4a61cfde05848db4085fb0918afdf";
@@ -15591,7 +15591,7 @@
   };
   "kotex-utils" = {
     relocated = false;
-    deps = ["kotex-utf" "kotex-utils.ARCH" ];
+    deps = ["kotex-utf" "kotex-utils.${arch}" ];
     md5.default = "9f39e97edafb7871aee5801cb54a351d";
     md5.doc = "a8dc4be6e674756c31851105f8b4cc33";
   };
@@ -15692,7 +15692,7 @@
   };
   "kpathsea" = {
     relocated = false;
-    deps = ["kpathsea.ARCH" ];
+    deps = ["kpathsea.${arch}" ];
     md5.default = "45fe79cd639e57b48b6010f17010350b";
     md5.doc = "4525ad5d00aa11b3627c8b5307b47eba";
   };
@@ -15914,7 +15914,7 @@
   };
   "lacheck" = {
     relocated = false;
-    deps = ["lacheck.ARCH" ];
+    deps = ["lacheck.${arch}" ];
     md5.default = "0b6f5acbe22bd61e44bd4fadf5f4b241";
     md5.doc = "b14bf3a45029bbbaa8224845f9fb6e9e";
   };
@@ -16066,7 +16066,7 @@
   };
   "latex-bin" = {
     relocated = false;
-    deps = ["latex" "latex-bin.ARCH" ];
+    deps = ["latex" "latex-bin.${arch}" ];
     md5.default = "bc6a30c907fbc2c50519424854146b4f";
     md5.doc = "36895638ba790971236b73123259209c";
   };
@@ -16191,7 +16191,7 @@
   };
   "latex-git-log" = {
     relocated = false;
-    deps = ["latex-git-log.ARCH" ];
+    deps = ["latex-git-log.${arch}" ];
     md5.default = "89dc129f6915c44e04b26c1ff18eb891";
     md5.doc = "cd4248fb00537d0121136079de93dbac";
   };
@@ -16354,7 +16354,7 @@
   };
   "latex2man" = {
     relocated = false;
-    deps = ["latex2man.ARCH" ];
+    deps = ["latex2man.${arch}" ];
     md5.default = "b432e4d9b187fa128827c90aafcadcc4";
     md5.doc = "48a67a62f5ccaf2e79b6c4d49d2f99ae";
   };
@@ -16509,7 +16509,7 @@
   };
   "latexdiff" = {
     relocated = false;
-    deps = ["latexdiff.ARCH" ];
+    deps = ["latexdiff.${arch}" ];
     md5.default = "a57e28bcae58d97de513443ff20f707f";
     md5.doc = "6cc2dafc33e678cc0ed1252391ec0b1a";
   };
@@ -16617,7 +16617,7 @@
   };
   "latexfileversion" = {
     relocated = false;
-    deps = ["latexfileversion.ARCH" ];
+    deps = ["latexfileversion.${arch}" ];
     md5.default = "81e99398d267219e222a00f51d80bef3";
     md5.doc = "aa651f1644014c52ba8a05a2cc4b8f17";
   };
@@ -16713,7 +16713,7 @@
   };
   "latexindent" = {
     relocated = false;
-    deps = ["latexindent.ARCH" ];
+    deps = ["latexindent.${arch}" ];
     md5.default = "db94351cfac795c3c6e70056a00f0fda";
     md5.doc = "cd6753b6f89d7f161701e3238afc788e";
   };
@@ -16814,7 +16814,7 @@
   };
   "latexmk" = {
     relocated = false;
-    deps = ["latexmk.ARCH" ];
+    deps = ["latexmk.${arch}" ];
     md5.default = "0af4368d8a12db187ab87304d5b9acb7";
     md5.src = "4694a6c6fb01a854db3407bb6470a906";
     md5.doc = "266f1308fdc190f699412f4021e846a7";
@@ -16922,7 +16922,7 @@
   };
   "latexpand" = {
     relocated = false;
-    deps = ["latexpand.ARCH" ];
+    deps = ["latexpand.${arch}" ];
     md5.default = "40ae5f661f819bf9243899f14658b064";
     md5.doc = "73d18fc2df1c529a565b3d42c6646c85";
   };
@@ -17057,7 +17057,7 @@
   };
   "lcdftypetools" = {
     relocated = false;
-    deps = ["glyphlist" "lcdftypetools.ARCH" ];
+    deps = ["glyphlist" "lcdftypetools.${arch}" ];
     md5.default = "f05388aad9d490ce67c74c962d8b754a";
     md5.doc = "2a093002575ab97cc37b96abf0ee911f";
   };
@@ -17333,7 +17333,7 @@
   };
   "lilyglyphs" = {
     relocated = false;
-    deps = ["lilyglyphs.ARCH" ];
+    deps = ["lilyglyphs.${arch}" ];
     md5.default = "56e14239cfa0def8e60f270c6d78729e";
     md5.src = "bdf6981e9b3aed207dcf052d3371bff4";
     md5.doc = "c7d5cfbf9ec471ec85c6081dd7054e66";
@@ -17481,7 +17481,7 @@
   };
   "listbib" = {
     relocated = false;
-    deps = ["listbib.ARCH" ];
+    deps = ["listbib.${arch}" ];
     md5.default = "65fdb8df2c04c4e60aae61bef5f29e79";
     md5.src = "feb754c49276321c52efaa76ce7cfd33";
     md5.doc = "7bff56d5631f8863f221cc4ae92d89c6";
@@ -17596,7 +17596,7 @@
   };
   "listings-ext" = {
     relocated = false;
-    deps = ["listings-ext.ARCH" ];
+    deps = ["listings-ext.${arch}" ];
     md5.default = "ff24704d2244c96076fd1a0ca037fcf6";
     md5.src = "4c3bf8851e17e97b425cb23c2ae0419f";
     md5.doc = "8f8c4a8486e9b7c783f7823737198c01";
@@ -17812,7 +17812,7 @@
   };
   "lollipop" = {
     relocated = false;
-    deps = ["lollipop.ARCH" ];
+    deps = ["lollipop.${arch}" ];
     md5.default = "436207d3a337037ac2fbaddf9529aabe";
     md5.doc = "97203ace70c345064faad9e890e5c2a8";
   };
@@ -18147,7 +18147,7 @@
   };
   "ltxfileinfo" = {
     relocated = false;
-    deps = ["ltxfileinfo.ARCH" ];
+    deps = ["ltxfileinfo.${arch}" ];
     md5.default = "9a0f584b99025f418a6018b46d5b1ffc";
     md5.doc = "2780dbea706a45d51b22f78154289c6b";
   };
@@ -18243,7 +18243,7 @@
   };
   "ltximg" = {
     relocated = false;
-    deps = ["ltximg.ARCH" ];
+    deps = ["ltximg.${arch}" ];
     md5.default = "72301d4b212e2ecbf493dea49adffe69";
     md5.doc = "be0e34a84b44af0f800854a79cad0ba9";
   };
@@ -18393,7 +18393,7 @@
   };
   "lua2dox" = {
     relocated = false;
-    deps = ["lua2dox.ARCH" ];
+    deps = ["lua2dox.${arch}" ];
     md5.default = "8daaa9ae1a2011b9669f68c659de1507";
     md5.doc = "1e23b68496bd1cb6e034ad793ea01a0a";
   };
@@ -18568,7 +18568,7 @@
   };
   "luaotfload" = {
     relocated = false;
-    deps = ["luaotfload.ARCH" ];
+    deps = ["luaotfload.${arch}" ];
     md5.default = "acfc22d9b221cd2d4d445b7b164d5d76";
     md5.src = "959415cc76e75411fad223ab9f8dc9ee";
     md5.doc = "b676f67f1749a7e5b3f4ee85c1e86edb";
@@ -18677,7 +18677,7 @@
   };
   "luatex" = {
     relocated = false;
-    deps = ["luatex.ARCH" ];
+    deps = ["luatex.${arch}" ];
     md5.default = "59365dd44535bc8853b8b3f0e85b4292";
     md5.doc = "3f7c12fa02a8529bc2abf5624bb0825c";
   };
@@ -18831,7 +18831,7 @@
   };
   "m-tx" = {
     relocated = false;
-    deps = ["m-tx.ARCH" ];
+    deps = ["m-tx.${arch}" ];
     md5.default = "10a412670eb40aacc9e744c9c131f39c";
     md5.doc = "ea4f1a3d492220713f64a62c75d8d578";
   };
@@ -18971,7 +18971,7 @@
   };
   "make4ht" = {
     relocated = false;
-    deps = ["make4ht.ARCH" ];
+    deps = ["make4ht.${arch}" ];
     md5.default = "4f5b284a8128a6b91a72ec4b12fcc1f5";
     md5.doc = "68d5539e052a75e4a66156b2b578f865";
   };
@@ -19105,7 +19105,7 @@
   };
   "makedtx" = {
     relocated = false;
-    deps = ["makedtx.ARCH" ];
+    deps = ["makedtx.${arch}" ];
     md5.default = "c2aff4e326d5f6bbfba492ace51fc480";
     md5.src = "5eb807b9bd38f110040c49bda99de9b5";
     md5.doc = "9411c70419924548a1901ea6a69ff179";
@@ -19213,7 +19213,7 @@
   };
   "makeindex" = {
     relocated = false;
-    deps = ["makeindex.ARCH" ];
+    deps = ["makeindex.${arch}" ];
     md5.default = "da255588d1efb696a839aafb24f65ac7";
     md5.doc = "4cf63bfd64c51343be4871a197b69d50";
   };
@@ -19395,7 +19395,7 @@
   };
   "match_parens" = {
     relocated = false;
-    deps = ["match_parens.ARCH" ];
+    deps = ["match_parens.${arch}" ];
     md5.default = "effa3d0a521b4f0916a5fc7d5db41bc5";
     md5.doc = "6b46efdcb5e79586d9f9ad9409d198fd";
   };
@@ -19573,7 +19573,7 @@
   };
   "mathspic" = {
     relocated = false;
-    deps = ["mathspic.ARCH" ];
+    deps = ["mathspic.${arch}" ];
     md5.default = "bd98fa82c3917e10df1468991709cd6e";
     md5.doc = "51c4b848e501bf8067dd1d8a480d6e1c";
   };
@@ -19846,7 +19846,7 @@
   };
   "metafont" = {
     relocated = false;
-    deps = ["kpathsea" "metafont.ARCH" ];
+    deps = ["kpathsea" "metafont.${arch}" ];
     md5.default = "378dfe9cdb908dc71a7ab5c785139a0d";
     md5.doc = "8f2e1f909d71fec6b060f0cf63ddd1a9";
   };
@@ -19978,7 +19978,7 @@
   };
   "metapost" = {
     relocated = false;
-    deps = ["kpathsea" "metapost.ARCH" ];
+    deps = ["kpathsea" "metapost.${arch}" ];
     md5.default = "134b0fd6b6f74aaf4364c7e0efbd3837";
     md5.doc = "124ce355ad9e9ef628d509ebbd935192";
   };
@@ -20124,7 +20124,7 @@
   };
   "mex" = {
     relocated = false;
-    deps = ["pl" "hyphen-polish" "pdftex" "tex" "mex.ARCH" ];
+    deps = ["pl" "hyphen-polish" "pdftex" "tex" "mex.${arch}" ];
     md5.default = "6f2a8f4e1da8f1a2740e7ae32b700654";
     md5.src = "d9cc6973cad10cd45e5983f32531c5d7";
     md5.doc = "b35087175b097ec5de1e9fa134f07e55";
@@ -20226,7 +20226,7 @@
   };
   "mf2pt1" = {
     relocated = false;
-    deps = ["mf2pt1.ARCH" ];
+    deps = ["mf2pt1.${arch}" ];
     md5.default = "9acd607b15715df3b8bac10000594023";
     md5.doc = "bea2432336e69a3516b513a1ff80022b";
   };
@@ -20375,7 +20375,7 @@
   };
   "mfware" = {
     relocated = false;
-    deps = ["mfware.ARCH" ];
+    deps = ["mfware.${arch}" ];
     md5.default = "87174cf7df921ba0b78b8c8afe65bd3f";
     md5.doc = "48020efa072999e58e3da34e1e48ca6e";
   };
@@ -20585,7 +20585,7 @@
   };
   "mkgrkindex" = {
     relocated = false;
-    deps = ["mkgrkindex.ARCH" ];
+    deps = ["mkgrkindex.${arch}" ];
     md5.default = "2b31df31524f2de5b4ddaca47c6b0697";
     md5.doc = "f470de48fa2faeb1e4af0b00b4fb04e1";
   };
@@ -20686,7 +20686,7 @@
   };
   "mkjobtexmf" = {
     relocated = false;
-    deps = ["mkjobtexmf.ARCH" ];
+    deps = ["mkjobtexmf.${arch}" ];
     md5.default = "155ba037b4ed18dab31266e8d9c007e7";
     md5.src = "3138203648bd459bc8e11758f798a5ce";
     md5.doc = "e0e8d3b2b93cd6d315ed04c0183ad426";
@@ -20794,7 +20794,7 @@
   };
   "mkpic" = {
     relocated = false;
-    deps = ["mkpic.ARCH" ];
+    deps = ["mkpic.${arch}" ];
     md5.default = "95a2f65161372b80a5eed0b15bbe56db";
     md5.doc = "198bea8e10a42a0f9bec2e0e1c40536d";
   };
@@ -20908,7 +20908,7 @@
   };
   "mltex" = {
     relocated = false;
-    deps = ["latex" "mltex.ARCH" ];
+    deps = ["latex" "mltex.${arch}" ];
     md5.default = "93703f481e76f66ea147949dda3fe277";
     md5.doc = "1ea2016cabf4771e91cc4be6b95e6b03";
   };
@@ -21174,7 +21174,7 @@
   };
   "mptopdf" = {
     relocated = false;
-    deps = ["mptopdf.ARCH" ];
+    deps = ["mptopdf.${arch}" ];
     md5.default = "6e22ef3d63a0317b1e6820de9680566d";
     md5.doc = "2f6fcf2a32161c6a4e3e31e41774a560";
   };
@@ -21348,7 +21348,7 @@
   };
   "multibibliography" = {
     relocated = false;
-    deps = ["multibibliography.ARCH" ];
+    deps = ["multibibliography.${arch}" ];
     md5.default = "ad50d1fc9988f6c16aa8c4cf13b2f90c";
     md5.src = "b203b46ffe1ac7310057d9dc7c3b4b13";
     md5.doc = "de50d331ed2fd0061ffcaf6d9cdfc6c7";
@@ -21503,7 +21503,7 @@
   };
   "musixtex" = {
     relocated = false;
-    deps = ["musixtex.ARCH" ];
+    deps = ["musixtex.${arch}" ];
     md5.default = "47194545e08616934d66a7c27d7c59ef";
     md5.src = "18cf91f1a50d6e4dafa8b49bf9bfe379";
     md5.doc = "7a280575e4fad56ea9f0a6b8e8277d49";
@@ -21611,7 +21611,7 @@
   };
   "musixtnt" = {
     relocated = false;
-    deps = ["musixtex" "musixtnt.ARCH" ];
+    deps = ["musixtex" "musixtnt.${arch}" ];
     md5.default = "29a0466eb7cf5033046844b05f786af3";
     md5.doc = "0e9633f55adfe0383ae9c77d4f73c316";
   };
@@ -22337,7 +22337,7 @@
   };
   "omegaware" = {
     relocated = false;
-    deps = ["omegaware.ARCH" ];
+    deps = ["omegaware.${arch}" ];
     md5.default = "78d49603964bf8ffec2a549317056bb9";
     md5.doc = "b57d3fe89bd289196528cb1d735390fa";
   };
@@ -22739,7 +22739,7 @@
   };
   "patgen" = {
     relocated = false;
-    deps = ["kpathsea" "patgen.ARCH" ];
+    deps = ["kpathsea" "patgen.${arch}" ];
     md5.default = "9bb91acf9b04c00d2ca5f044e839bf11";
     md5.doc = "20f952cfb73ecce2b0eaa7ddfa9ec89d";
   };
@@ -22866,7 +22866,7 @@
   };
   "pax" = {
     relocated = false;
-    deps = ["pax.ARCH" ];
+    deps = ["pax.${arch}" ];
     md5.default = "b4b9b3d4be53065f4126d0d37357f048";
     md5.src = "eaae5d94f1625bd2d600cd613274fb47";
     md5.doc = "8a2c684297f36b1788e0bc1c517bc323";
@@ -23001,7 +23001,7 @@
   };
   "pdfbook2" = {
     relocated = false;
-    deps = ["pdfbook2.ARCH" ];
+    deps = ["pdfbook2.${arch}" ];
     md5.default = "77ffac516a6e70989541e41772944171";
     md5.doc = "cd3e8e1fdd69defc33699b5a010e8969";
   };
@@ -23110,7 +23110,7 @@
   };
   "pdfcrop" = {
     relocated = false;
-    deps = ["pdfcrop.ARCH" ];
+    deps = ["pdfcrop.${arch}" ];
     md5.default = "c71f87d2be6070edc82bfd805a85f35d";
     md5.doc = "155e3b689fd1fe99418daf17fb6ce8c1";
   };
@@ -23211,7 +23211,7 @@
   };
   "pdfjam" = {
     relocated = false;
-    deps = ["pdfjam.ARCH" ];
+    deps = ["pdfjam.${arch}" ];
     md5.default = "bb456a871287eefd8c6694a368ae47b1";
     md5.doc = "ce80471e87eba8eea86c2f01694c5f3e";
   };
@@ -23344,7 +23344,7 @@
   };
   "pdftex" = {
     relocated = false;
-    deps = ["kpathsea" "pdftex.ARCH" ];
+    deps = ["kpathsea" "pdftex.${arch}" ];
     md5.default = "55c4cf79bea2419b4af8edfec4b11eeb";
     md5.doc = "bae0ae5e3ef3f2ded2cc872babfef166";
   };
@@ -23450,7 +23450,7 @@
   };
   "pdftools" = {
     relocated = false;
-    deps = ["pdftools.ARCH" ];
+    deps = ["pdftools.${arch}" ];
     md5.default = "404cbdd34ef53509ef51e935920615d8";
     md5.doc = "1340668f860674bab263c9bd85c110bd";
   };
@@ -23582,7 +23582,7 @@
   };
   "pedigree-perl" = {
     relocated = false;
-    deps = ["pedigree-perl.ARCH" ];
+    deps = ["pedigree-perl.${arch}" ];
     md5.default = "de5425058b3b6d409c0f2652e72aa915";
     md5.doc = "6c53222a5411aa178a0dd6aba6a864de";
   };
@@ -23695,7 +23695,7 @@
   };
   "perltex" = {
     relocated = false;
-    deps = ["perltex.ARCH" ];
+    deps = ["perltex.${arch}" ];
     md5.default = "512622421831a08605bf95158478b219";
     md5.src = "6fcbd006bb259ba53de21a50a010d45e";
     md5.doc = "435874a6649cdb108cf20dd074ca8ef7";
@@ -23816,7 +23816,7 @@
   };
   "petri-nets" = {
     relocated = false;
-    deps = ["petri-nets.ARCH" ];
+    deps = ["petri-nets.${arch}" ];
     md5.default = "5784db7c2889aeb99fbd1f927dbc4191";
     md5.doc = "c3dd437f738bf3ddf74e9244206576ec";
   };
@@ -23917,7 +23917,7 @@
   };
   "pfarrei" = {
     relocated = false;
-    deps = ["pfarrei.ARCH" ];
+    deps = ["pfarrei.${arch}" ];
     md5.default = "8a40a6d94742c0efca57e4c0cbd25222";
     md5.src = "dc918a30bed27f0b46e4fa4fafd4a7ac";
     md5.doc = "8ddcea61aaff46e42a2a889305a47841";
@@ -24210,13 +24210,13 @@
   };
   "pkfix" = {
     relocated = false;
-    deps = ["pkfix.ARCH" ];
+    deps = ["pkfix.${arch}" ];
     md5.default = "c35b39b6d59ef87f91b605888504db3e";
     md5.doc = "225e1cd5e3ff19252742c4d38108b960";
   };
   "pkfix-helper" = {
     relocated = false;
-    deps = ["pkfix-helper.ARCH" ];
+    deps = ["pkfix-helper.${arch}" ];
     md5.default = "d9d38f341b0d67e3e0c4371cad1ac1b1";
     md5.doc = "5a88b70426f02edfe6bb90812fcf57ca";
   };
@@ -24529,7 +24529,7 @@
   };
   "pmx" = {
     relocated = false;
-    deps = ["pmx.ARCH" ];
+    deps = ["pmx.${arch}" ];
     md5.default = "8f6e4370050ced294ca268caab6abab8";
     md5.doc = "cc866e8ace9abe852d5244ea9b049b6e";
   };
@@ -24630,7 +24630,7 @@
   };
   "pmxchords" = {
     relocated = false;
-    deps = ["pmxchords.ARCH" ];
+    deps = ["pmxchords.${arch}" ];
     md5.default = "c620718ba1530b16dc78062dd66f2a6e";
     md5.doc = "b9956d9f9aded9c057c5950605b0d31b";
   };
@@ -24990,7 +24990,7 @@
   };
   "ps2pk" = {
     relocated = false;
-    deps = ["ps2pk.ARCH" ];
+    deps = ["ps2pk.${arch}" ];
     md5.default = "72757749891d4690f66aea085de766c6";
     md5.doc = "fbe2cc1ad39dba075418432c46405a13";
   };
@@ -25497,7 +25497,7 @@
   };
   "pst-pdf" = {
     relocated = false;
-    deps = ["pst-pdf.ARCH" ];
+    deps = ["pst-pdf.${arch}" ];
     md5.default = "d65ab23b8f3ca1ee19d7e86bb875d303";
     md5.src = "2a8b54754a1ecd6af3e90907ec16a80e";
     md5.doc = "83be8627e13d7a439de555bf5c06d7ba";
@@ -25768,7 +25768,7 @@
   };
   "pst2pdf" = {
     relocated = false;
-    deps = ["pst2pdf.ARCH" ];
+    deps = ["pst2pdf.${arch}" ];
     md5.default = "eea9bf8d738c1c7f17a6f650d86a82e1";
     md5.doc = "0b73c101d2b70d7ab7ee712095e73dd1";
   };
@@ -25876,7 +25876,7 @@
   };
   "pstools" = {
     relocated = false;
-    deps = ["pstools.ARCH" ];
+    deps = ["pstools.${arch}" ];
     md5.default = "e5656655299714683e3981c399114e0f";
     md5.doc = "60793909b0e1b29e938ad4aa00b1cf4d";
   };
@@ -26013,7 +26013,7 @@
   };
   "psutils" = {
     relocated = false;
-    deps = ["psutils.ARCH" ];
+    deps = ["psutils.${arch}" ];
     md5.default = "4039c42b3b4d043e1925df71a06b861b";
     md5.doc = "347bd6b9d5c6a513f71eeada8da058f7";
   };
@@ -26114,7 +26114,7 @@
   };
   "ptex" = {
     relocated = false;
-    deps = ["tex" "latex" "hyph-utf8" "adobemapping" "ipaex" "japanese" "japanese-otf" "ptex.ARCH" ];
+    deps = ["tex" "latex" "hyph-utf8" "adobemapping" "ipaex" "japanese" "japanese-otf" "ptex.${arch}" ];
     md5.default = "89766d1cfcb611a881c32439b2ca79f1";
     md5.src = "10225dfd165b2155a0f5331eb7f3546d";
     md5.doc = "902dc5fbb99e4bc2e5c354227af1285f";
@@ -26216,7 +26216,7 @@
   };
   "ptex2pdf" = {
     relocated = false;
-    deps = ["ptex2pdf.ARCH" ];
+    deps = ["ptex2pdf.${arch}" ];
     md5.default = "93c11713532938e4a09cb3b1b55884e4";
     md5.doc = "5a526be36b1c39ec0283a3a68c0d45ca";
   };
@@ -26347,7 +26347,7 @@
   };
   "purifyeps" = {
     relocated = false;
-    deps = ["purifyeps.ARCH" ];
+    deps = ["purifyeps.${arch}" ];
     md5.default = "4b4febba4edf3412c2ee7684f9266bae";
     md5.doc = "dc831417f58a1156c4db6c279b51a6ca";
   };
@@ -26504,7 +26504,7 @@
   };
   "pygmentex" = {
     relocated = false;
-    deps = ["pygmentex.ARCH" ];
+    deps = ["pygmentex.${arch}" ];
     md5.default = "9d269819bd391726a0c9b71aa5411e77";
     md5.doc = "8a2decd7135fd6d3ba23ab7105cecd75";
   };
@@ -26611,7 +26611,7 @@
   };
   "pythontex" = {
     relocated = false;
-    deps = ["pythontex.ARCH" ];
+    deps = ["pythontex.${arch}" ];
     md5.default = "ab5ea31e5f1687e9982e1ac5b4b42ef6";
     md5.src = "235cc376313abd4d3fa96c241f94bb11";
     md5.doc = "a2560897278866c25a1fa11565f33777";
@@ -27237,7 +27237,7 @@
   };
   "rubik" = {
     relocated = false;
-    deps = ["rubik.ARCH" ];
+    deps = ["rubik.${arch}" ];
     md5.default = "24c345df9563c69182ab52a9c2e854cc";
     md5.src = "d28cc23ccf40cc0adac9f2a457e84a9e";
     md5.doc = "303ce98c0e4f4ef771a18dec55fd3175";
@@ -27654,7 +27654,7 @@
   };
   "seetexk" = {
     relocated = false;
-    deps = ["seetexk.ARCH" ];
+    deps = ["seetexk.${arch}" ];
     md5.default = "edf3afd1a8941c778bd4965ce218994c";
     md5.doc = "abd14250353d1ae2fb31372f41b640be";
   };
@@ -28301,7 +28301,7 @@
   };
   "splitindex" = {
     relocated = false;
-    deps = ["splitindex.ARCH" ];
+    deps = ["splitindex.${arch}" ];
     md5.default = "a228e7e548e7a1b2c0e53d72d57872bc";
     md5.src = "1fdd93b7ec8e9dc6c426a31df04236c9";
     md5.doc = "f727c43cf331e11c3cf68e3bcdf1ea0c";
@@ -28449,7 +28449,7 @@
   };
   "srcredact" = {
     relocated = false;
-    deps = ["srcredact.ARCH" ];
+    deps = ["srcredact.${arch}" ];
     md5.default = "de0aa41b08fb9e7693b41f5cd97dede9";
     md5.doc = "67612459b2aabe69acf888c6becf2039";
   };
@@ -28716,7 +28716,7 @@
   };
   "sty2dtx" = {
     relocated = false;
-    deps = ["sty2dtx.ARCH" ];
+    deps = ["sty2dtx.${arch}" ];
     md5.default = "c7abe14927baeef85950db574e439a03";
     md5.doc = "83f02293eaff53c2377fe8dac420e16f";
   };
@@ -28974,7 +28974,7 @@
   };
   "svn-multi" = {
     relocated = false;
-    deps = ["svn-multi.ARCH" ];
+    deps = ["svn-multi.${arch}" ];
     md5.default = "9fb4907bb14c3f819e5c22434d0f9c70";
     md5.src = "8ccad4d8301ac74717993506d778c46e";
     md5.doc = "d73f08240b13fc5af6a2629e9c23241a";
@@ -29120,7 +29120,7 @@
   };
   "synctex" = {
     relocated = false;
-    deps = ["synctex.ARCH" ];
+    deps = ["synctex.${arch}" ];
     md5.default = "adb2f0e40208fe8ddc08f0dc8fb53e67";
     md5.doc = "a427d566a6502b3b4486f709287e1e09";
   };
@@ -29259,7 +29259,7 @@
   };
   "t1utils" = {
     relocated = false;
-    deps = ["t1utils.ARCH" ];
+    deps = ["t1utils.${arch}" ];
     md5.default = "ebbf65b72bf5531cebfd43410b9cd722";
     md5.doc = "89f70957a744f903964629f82732cfdd";
   };
@@ -29650,7 +29650,7 @@
   };
   "tetex" = {
     relocated = false;
-    deps = ["tetex.ARCH" ];
+    deps = ["tetex.${arch}" ];
     md5.default = "8bcafde8028600dae9377274c21070a2";
     md5.doc = "fa2a43cc0de075e400afb7392959e32f";
   };
@@ -29758,7 +29758,7 @@
   };
   "tex" = {
     relocated = false;
-    deps = ["kpathsea" "plain" "tex.ARCH" ];
+    deps = ["kpathsea" "plain" "tex.${arch}" ];
     md5.default = "df23b16b4ceaf0d33f194abc3bcf867f";
     md5.doc = "c9a65f4a5b01474c55e92a5fee15d31e";
   };
@@ -29914,7 +29914,7 @@
   };
   "tex4ebook" = {
     relocated = false;
-    deps = ["tex4ebook.ARCH" ];
+    deps = ["tex4ebook.${arch}" ];
     md5.default = "8832071f0433d02430a6e46be2ae6c0e";
     md5.doc = "f2399a2337f1587aa1a3df1ac5cd7283";
   };
@@ -30015,7 +30015,7 @@
   };
   "tex4ht" = {
     relocated = false;
-    deps = ["tex4ht.ARCH" ];
+    deps = ["tex4ht.${arch}" ];
     md5.default = "d1dcb737f7d130f05f521b3740fdf92c";
     md5.doc = "e36f5338c294560cd8d162d469ebd7f1";
   };
@@ -30128,7 +30128,7 @@
   };
   "texconfig" = {
     relocated = false;
-    deps = ["texconfig.ARCH" ];
+    deps = ["texconfig.${arch}" ];
     md5.default = "6303963f612a45770d39664af3951920";
     md5.doc = "e2280c7d14ce1b59aa1704fb3c5c8eb1";
   };
@@ -30224,7 +30224,7 @@
   };
   "texcount" = {
     relocated = false;
-    deps = ["texcount.ARCH" ];
+    deps = ["texcount.${arch}" ];
     md5.default = "d950747c3823c1b4ea6b569dd31fe794";
     md5.doc = "61d0c815eed638fd14b8d1a9ef3f5b61";
   };
@@ -30325,7 +30325,7 @@
   };
   "texdef" = {
     relocated = false;
-    deps = ["texdef.ARCH" ];
+    deps = ["texdef.${arch}" ];
     md5.default = "9d2c8ba4716ce751ac2d26938f47a0d1";
     md5.src = "c1e1a3a3d358859df85120af8f7c1b82";
     md5.doc = "1a47c055cdf3a0385b4b07ffa6bc55ec";
@@ -30427,7 +30427,7 @@
   };
   "texdiff" = {
     relocated = false;
-    deps = ["texdiff.ARCH" ];
+    deps = ["texdiff.${arch}" ];
     md5.default = "c06b184ca97c28c2313560032930fe8c";
     md5.doc = "904fcb2205e352a633b1801679568451";
   };
@@ -30528,7 +30528,7 @@
   };
   "texdirflatten" = {
     relocated = false;
-    deps = ["texdirflatten.ARCH" ];
+    deps = ["texdirflatten.${arch}" ];
     md5.default = "4fc65facfe03f4b9f133ad3c9d3296ac";
     md5.doc = "63e5be8dc7ea8d01e1c584beceae6e75";
   };
@@ -30629,7 +30629,7 @@
   };
   "texdoc" = {
     relocated = false;
-    deps = ["kpathsea" "texdoc.ARCH" ];
+    deps = ["kpathsea" "texdoc.${arch}" ];
     md5.default = "2c18b4eaf44d5849bea2b17f696fc940";
     md5.doc = "8afd59241d5d4791a57adfa7ee00bf76";
   };
@@ -30736,7 +30736,7 @@
   };
   "texfot" = {
     relocated = false;
-    deps = ["texfot.ARCH" ];
+    deps = ["texfot.${arch}" ];
     md5.default = "facb61475027fed712893f917e2b1085";
     md5.doc = "5b06a946166075153f9151087ba6daa3";
   };
@@ -30911,7 +30911,7 @@
   };
   "texlive-scripts" = {
     relocated = false;
-    deps = ["texlive.infra" "texlive-scripts.ARCH" ];
+    deps = ["texlive.infra" "texlive-scripts.${arch}" ];
     md5.default = "e183bdcddb45d658508938b927cc8464";
     md5.doc = "f84e17e8379f4d0432ebd0ee61274aac";
   };
@@ -31024,7 +31024,7 @@
   };
   "texlive.infra" = {
     relocated = false;
-    deps = ["texlive.infra.ARCH" ];
+    deps = ["texlive.infra.${arch}" ];
     md5.default = "b559e3a54bf8bd8a22050e007be947e5";
     md5.doc = "f34775b55f195dbc73880b4b32859401";
   };
@@ -31125,7 +31125,7 @@
   };
   "texliveonfly" = {
     relocated = false;
-    deps = ["texliveonfly.ARCH" ];
+    deps = ["texliveonfly.${arch}" ];
     md5.default = "8bbc98f6b5d4d855ed62a2444c3c8b24";
     md5.doc = "86963b2267f03d29f4356f9317b0d100";
   };
@@ -31226,7 +31226,7 @@
   };
   "texloganalyser" = {
     relocated = false;
-    deps = ["texloganalyser.ARCH" ];
+    deps = ["texloganalyser.${arch}" ];
     md5.default = "39af987d575612f05923e49e7ab5cd0d";
     md5.doc = "2fe34485c1af74e12caa767cb8732a29";
   };
@@ -31360,7 +31360,7 @@
   };
   "texsis" = {
     relocated = false;
-    deps = ["tex" "texsis.ARCH" ];
+    deps = ["tex" "texsis.${arch}" ];
     md5.default = "d9f8464567cce8f2a5349f98884bcf4d";
     md5.doc = "7dda6ce4ccea48fe50705ac3a30e2fba";
   };
@@ -31523,7 +31523,7 @@
   };
   "texware" = {
     relocated = false;
-    deps = ["texware.ARCH" ];
+    deps = ["texware.${arch}" ];
     md5.default = "80ffb9df41f75e560056f3591de1fc00";
     md5.doc = "2b3fdfcf2ff30703e417cad7bf916509";
   };
@@ -31624,7 +31624,7 @@
   };
   "texworks" = {
     relocated = false;
-    deps = ["texworks.ARCH" ];
+    deps = ["texworks.${arch}" ];
     md5.default = "d927fc47acf388f1a0fc13a2ed5e21b0";
     md5.doc = "79806770052f8733f69d3ec6c8d5f100";
   };
@@ -31721,7 +31721,7 @@
   };
   "thumbpdf" = {
     relocated = false;
-    deps = ["thumbpdf.ARCH" ];
+    deps = ["thumbpdf.${arch}" ];
     md5.default = "94c70c9f847197eee87567f134334374";
     md5.doc = "9fe301c43714c526b817e77047fe147b";
   };
@@ -31854,7 +31854,7 @@
   };
   "tie" = {
     relocated = false;
-    deps = ["kpathsea" "tie.ARCH" ];
+    deps = ["kpathsea" "tie.${arch}" ];
     md5.default = "48b5bae06210a1187a3e4283179344a3";
     md5.doc = "83b76b7927ec48ea413ded6cbd1169bc";
   };
@@ -32310,7 +32310,7 @@
   };
   "tpic2pdftex" = {
     relocated = false;
-    deps = ["tpic2pdftex.ARCH" ];
+    deps = ["tpic2pdftex.${arch}" ];
     md5.default = "8c87529607c526c960dd6ed99a8db246";
     md5.doc = "be9cb7b25763e3c6f03e9b9820c59e22";
   };
@@ -32569,7 +32569,7 @@
   };
   "ttfutils" = {
     relocated = false;
-    deps = ["ttfutils.ARCH" ];
+    deps = ["ttfutils.${arch}" ];
     md5.default = "e12d7b6a7f1c31c331cde2d627ade813";
     md5.doc = "d817af16f2b1dd440d6c9ce4e3e153f4";
   };
@@ -32795,7 +32795,7 @@
   };
   "typeoutfileinfo" = {
     relocated = false;
-    deps = ["typeoutfileinfo.ARCH" ];
+    deps = ["typeoutfileinfo.${arch}" ];
     md5.default = "656416450ac7210045a1ae4d3b9adc33";
     md5.doc = "2235c2c5f43c4c3ff7be92da7454b418";
   };
@@ -33019,7 +33019,7 @@
   };
   "ulqda" = {
     relocated = false;
-    deps = ["ulqda.ARCH" ];
+    deps = ["ulqda.${arch}" ];
     md5.default = "b50b104a1bdb0843b9a9041e4bf0e24d";
     md5.src = "6219a882e8592c12e78773d59074e4b6";
     md5.doc = "b6fcc29942c08e760b9c3b1dd7b1b6db";
@@ -33313,7 +33313,7 @@
   };
   "uptex" = {
     relocated = false;
-    deps = ["ptex" "hyph-utf8" "adobemapping" "convbkmk" "ipaex" "japanese" "japanese-otf" "latex" "uptex.ARCH" ];
+    deps = ["ptex" "hyph-utf8" "adobemapping" "convbkmk" "ipaex" "japanese" "japanese-otf" "latex" "uptex.${arch}" ];
     md5.default = "5c6b7e21a7b46060dd37cfd44f79f132";
     md5.src = "206bdaff8aef3057c42c42cf57727270";
     md5.doc = "19ea5353498bd303245ab364cb34f346";
@@ -33434,7 +33434,7 @@
   };
   "urlbst" = {
     relocated = false;
-    deps = ["urlbst.ARCH" ];
+    deps = ["urlbst.${arch}" ];
     md5.default = "8155d195c230b624a78797c13e21869d";
     md5.src = "6fe3a71acae13c2b52b6eacc33915523";
     md5.doc = "3e5cc5e4c3d3bfd9caff7e122c711120";
@@ -33755,7 +33755,7 @@
   };
   "vlna" = {
     relocated = false;
-    deps = ["vlna.ARCH" ];
+    deps = ["vlna.${arch}" ];
     md5.default = "4a2296280a404a0322b1ef74f1c9c9c4";
     md5.doc = "ef805e4b127c4976e9bd798d0315afab";
   };
@@ -33895,7 +33895,7 @@
   };
   "vpe" = {
     relocated = false;
-    deps = ["vpe.ARCH" ];
+    deps = ["vpe.${arch}" ];
     md5.default = "66efcbf2a262780e8a9dee10ef448dc7";
     md5.doc = "0223350c08b606caf6c49b5e02100cbf";
   };
@@ -34060,7 +34060,7 @@
   };
   "web" = {
     relocated = false;
-    deps = ["kpathsea" "web.ARCH" ];
+    deps = ["kpathsea" "web.${arch}" ];
     md5.default = "60ba3f74fba71aade9d6ac3181a5e4c6";
     md5.doc = "7cb5aaed54fa94bcfd12a1537315943a";
   };
@@ -34298,7 +34298,7 @@
   };
   "xdvi" = {
     relocated = false;
-    deps = ["xdvi.ARCH" ];
+    deps = ["xdvi.${arch}" ];
     md5.default = "0d66ffa281d713e3395ee0f5db93c9bd";
     md5.doc = "11ef916e02ea589fb1e28b856e837628";
   };
@@ -34413,7 +34413,7 @@
   };
   "xecyr" = {
     relocated = false;
-    deps = ["xecyr.ARCH" ];
+    deps = ["xecyr.${arch}" ];
     md5.default = "a3e65893f51073a39c010a2634644d17";
     md5.doc = "d1106a3950b65faa2752267eeabba5a9";
   };
@@ -34457,7 +34457,7 @@
   };
   "xetex" = {
     relocated = false;
-    deps = ["xetexconfig" "latex" "xetex.ARCH" ];
+    deps = ["xetexconfig" "latex" "xetex.${arch}" ];
     md5.default = "d5ef3b0529e75e370d42dadc0a3842c8";
     md5.doc = "9703478a02d5fbb7716a6d3b0b108c7b";
   };
@@ -34649,7 +34649,7 @@
   };
   "xindy" = {
     relocated = false;
-    deps = ["xindy.ARCH" ];
+    deps = ["xindy.${arch}" ];
     md5.default = "7a1251495eb112d3d79ae1c5811adbf9";
     md5.doc = "32a5e11047b21fbb22a11313e62434a4";
   };
@@ -34755,7 +34755,7 @@
   };
   "xmltex" = {
     relocated = false;
-    deps = ["latex" "pdftex" "tex" "xmltexconfig" "xmltex.ARCH" ];
+    deps = ["latex" "pdftex" "tex" "xmltexconfig" "xmltex.${arch}" ];
     md5.default = "72e9f34035d249e0fd5caa4a1252c5bc";
     md5.doc = "691142401d87c1bffc105f056d13b338";
   };
@@ -35071,7 +35071,7 @@
   };
   "yplan" = {
     relocated = false;
-    deps = ["yplan.ARCH" ];
+    deps = ["yplan.${arch}" ];
     md5.default = "20adc185c07a697e3ca05fbabeac8ee0";
     md5.doc = "1067783eebc33fe1b943cdb5da7592c7";
   };

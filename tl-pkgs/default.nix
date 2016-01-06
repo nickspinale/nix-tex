@@ -1,7 +1,7 @@
 { stdenv, lib, fetchurl, callPackage }:
 let
   fix = f: let x = f x; in x;
-  pkgs = import ./pkgs.nix;
+  pkgs = import ./pkgs.nix stdenv.system;
   names = builtins.attrNames pkgs;
   tl = self:
     let
