@@ -1,43 +1,74 @@
+{-# LANGUAGE RecordWildCards #-}
+
 module Main where
 
+import           Control.Applicative
+import           Data.Attoparsec.ByteString.Char8
 import qualified Data.ByteString as B
-import Data.Attoparsec.ByteString.Char8
-import Control.Applicative
+import           Data.ByteString.Builder
+import qualified Data.ByteString.Char8 as C
+import           Data.Maybe
+import           Data.Monoid
+import           System.IO
 
-type MD5 = B.ByteString
-type Arch = B.ByteString
+data Package = Package String PkgBody deriving Show
 
-data Package = Package String [String] CorePkg
+data PkgBody = PkgBody { relocated :: Bool
+                       , depend :: [String]
+                       , containermd5 :: Maybe MD5
+                       , srccontainermd5 :: Maybe MD5
+                       , doccontainermd5 :: Maybe MD5
+                       } deriving Show
 
-data CorePkg = Bin { arch :: Arch
-                   , md5  :: MD5
-                   }
-             | Texmf { relocated :: Bool
-                     , run :: Maybe MD5
-                     , src :: Maybe MD5
-                     , doc :: Maybe MD5
-                     }
+type MD5 = String
 
 -- key, value, and maybe files
-data Entry = Entry String String (Maybe [String]) deriving 
+data Entry = Entry String String [String] deriving Show
 
-entries :: Parser [Entry]
-entries = do
-    key <- many1 letter_ascii
-    space
-    value <- manyTill anyChar endOfLine
-    -- let beFiles = (:) <$> fmap (Entry key value . Just) files <*> entries
-    filesM <- fmap Just files <|> return Nothing
-    return $ Entry key value filesM
+buildPackage :: Package -> Builder
+buildPackage (Package name (PkgBody{..})) = (mconcat $ map ((indent <>) . (<> char7 '\n')) lines)
   where
-    files = many1 (space *> manyTill anyChar endOfLine)
+    indent = string7 "  "
+    equals = string7 " = "
+    quote str = char7 '"' <> string7 str <> char7 '"'
+    lines = [quote name <> equals <> char7 '{']
+         ++ map ((indent <>) . (<> char7 ';')) rest
+         ++ [string7 "};"]
+    rest = [ string7 "relocated" <> equals <> string7 (if relocated then "true" else "false")
+           , string7 "deps" <> equals <> char7 '[' <> deps <> char7 ']'
+           ] ++ md5 "default" containermd5
+             ++ md5 "src" srccontainermd5
+             ++ md5 "doc" doccontainermd5
+    md5 str = maybeToList . fmap (\m -> string7 "md5." <> string7 str <> equals <> quote m)
+    deps = foldr (\l r -> quote l <> char7 ' '  <> r) mempty depend
 
-keyIs :: String -> Entry -> Bool
-keyIs key (Entry key' _ _) = key == key'
+pprintEntry :: Entry -> IO ()
+pprintEntry (Entry key value files) = do
+    putStr key
+    putChar ' '
+    putStr value
+    putChar '\n'
+    mapM_ (\file -> putChar ' ' >> putStr file >> putChar '\n') files
 
-noFiles :: Entry -> Bool
-noFiles (Entry _ _ Nothing) = True
-noFiles _ = False
+entry :: Parser Entry
+entry = Entry <$> (many1 (satisfy inValue) <* char ' ')
+              <*> manyTill anyChar endOfLine
+              <*> many' (char ' ' *> manyTill anyChar (char '\n'))
+  where
+    inValue = fmap or $ sequence [ (==) '-'
+                                 , isDigit
+                                 , isAlpha_ascii
+                                 ]
+
+package :: Parser Package
+package = do
+    entries <- many' entry
+    case toPackage entries of
+        Just package -> return package
+        Nothing -> fail "package had no name"
+
+tlpdb :: Parser [[Entry]]
+tlpdb = many' entry `sepBy` string (C.pack "\n")
 
 exactlyOne :: [a] -> Maybe a
 exactlyOne [a] = Just a
@@ -47,22 +78,37 @@ lookupOne :: String -> [Entry] -> Maybe String
 lookupOne = ((.).(.)) exactlyOne lookupMany
 
 lookupMany :: String -> [Entry] -> [String]
-lookupMany key entries = [ value | Entry k value _, k == key ]
+lookupMany key entries = [ value | Entry k value _ <- entries, k == key ]
+
+toPkgBody :: [Entry] -> PkgBody
+toPkgBody = PkgBody <$> (maybe False (const True) <$> (lookupOne "relocated"))
+                    <*> lookupMany "depend"
+                    <*> lookupOne "containermd5"
+                    <*> lookupOne "srccontainermd5"
+                    <*> lookupOne "doccontainermd5"
 
 toPackage :: [Entry] -> Maybe Package
-toPackage = Package <$> lookupOne "name"
-                    <*> lookupMany "depend"
-                    <*> (maybeBin <|> maybeTexmf)
-  where
-    maybeBin = Bin <$> lookupOne "arch"
-                   <*> lookupOne "containermd5"
-    maybeTexmf = Texmf <$> maybe (const True) false (lookupOne "relocated") 
-                       <*> return (lookupOne "containermd5")
-                       <*> return (lookupOne "srccontainermd5")
-                       <*> return (lookupOne "doccontainermd5")
+toPackage ((Entry "name" name _):rest) = Just . Package name $ toPkgBody rest
+toPackage _ = Nothing
 
 main :: IO ()
 main = do
     putStrLn "tl: {"
-
+    getPackages (Partial (parse package))
     putStrLn "}"
+  where
+    getPackages' = getPackages $ Partial $ parse package
+    getPackages (Fail _ _ reason) = putStrLn reason
+    getPackages (Partial f) = do
+        line <- B.hGetLine stdin
+        getPackages (f (line <> C.pack "\n"))
+    getPackages (Done i r) = do
+        hPutBuilder stdout (buildPackage r)
+        getPackages'
+    -- getPackages = getPackages' (parse package)
+    -- getPackages' cont = do
+    --     line <- B.hGetLine stdin
+    --     case cont line of
+    --         Fail _ _ reason -> putStrLn reason
+    --         Partial f -> getPackages' f
+    --         Done i r -> hPutBuilder stdout (buildPackage r) >> getPackages
