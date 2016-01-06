@@ -3,4 +3,4 @@ let
   pkgs = import ./pkgs.nix {};
   tl-pkgs = callPackage (import ./default.nix) {};
 in
-  callPackage (tl-pkgs.tlify "kpathseawat" pkgs."kpathsea.x86_64-linux") {}
+  callPackage (tl-pkgs.tlify "kpathsea.x86_64-linux" pkgs."kpathsea.x86_64-linux") {}
