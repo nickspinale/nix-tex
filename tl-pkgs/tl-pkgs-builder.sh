@@ -1,9 +1,9 @@
 source $stdenv/setup
-# echo "foo" > $out
+
 mkdir $out
-echo "foo" > $out/hi
-echo $wat
-# tar -xf $default -C $out
-# echo $out
-# mkdir -p $out
-# echo "hi" > $out/wat.txt
+
+for kind in $default $src $doc; do
+    if test -f $kind; then
+        tar $transform -C $out --keep-old-files --exclude='tlpkg/*' -xf $kind 
+    fi
+done

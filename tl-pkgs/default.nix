@@ -11,8 +11,9 @@ let
           urlPrefix = "https://www.ctan.org/tex-archive/systems/texlive/tlnet/archive/" + name;
           urlSuffix = ".tar.xz";
           value = stdenv.mkDerivation ({
-              inherit name relocated;
+              inherit name;
               builder = ./tl-pkgs-builder.sh;
+              transform = if relocated then "--transform=s,^,texmf-dist/," else "";
               tl-deps = map (dep: builtins.getAttr dep self) deps;
             } // (if builtins.hasAttr "default" md5
                   then { default = fetchurl { url = urlPrefix + urlSuffix; md5 = md5.default; }; }
