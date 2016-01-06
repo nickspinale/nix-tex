@@ -100,15 +100,12 @@ main = do
     getPackages' = getPackages $ Partial $ parse package
     getPackages (Fail _ _ reason) = putStrLn reason
     getPackages (Partial f) = do
-        line <- B.hGetLine stdin
-        getPackages (f (line <> C.pack "\n"))
+        eof <- hIsEOF stdin
+        if eof
+         then return ()
+         else do
+            line <- B.hGetLine stdin
+            getPackages (f (line <> C.pack "\n"))
     getPackages (Done i r) = do
         hPutBuilder stdout (buildPackage r)
         getPackages'
-    -- getPackages = getPackages' (parse package)
-    -- getPackages' cont = do
-    --     line <- B.hGetLine stdin
-    --     case cont line of
-    --         Fail _ _ reason -> putStrLn reason
-    --         Partial f -> getPackages' f
-    --         Done i r -> hPutBuilder stdout (buildPackage r) >> getPackages
