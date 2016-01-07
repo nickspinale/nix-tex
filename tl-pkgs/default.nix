@@ -1,4 +1,4 @@
-{ stdenv, lib, fetchurl, callPackage }:
+{ stdenv, fetchurl, patchelf, glibc, callPackage }:
 let
   fix = f: let x = f x; in x;
   pkgs = import ./pkgs.nix stdenv.system;
@@ -11,8 +11,9 @@ let
           urlPrefix = "https://www.ctan.org/tex-archive/systems/texlive/tlnet/archive/" + name;
           urlSuffix = ".tar.xz";
           value = stdenv.mkDerivation ({
-              inherit name;
+              inherit name glibc;
               builder = ./tl-pkgs-builder.sh;
+              buildInputs = [ patchelf ];
               transform = if relocated then "--transform=s,^,texmf-dist/," else "";
               tl-deps = map (dep: builtins.getAttr dep self) deps;
             } // (if builtins.hasAttr "default" md5
