@@ -7,6 +7,7 @@ import           Data.Attoparsec.ByteString.Char8
 import qualified Data.ByteString as B
 import           Data.ByteString.Builder
 import qualified Data.ByteString.Char8 as C
+import           Data.Char (toLower)
 import           Data.Maybe
 import           Data.Monoid
 import           System.IO
@@ -34,12 +35,12 @@ buildPackage (Package name (PkgBody{..})) = mconcat $ map ((indent <>) . (<> cha
     lines = [quote name <> equals <> char7 '{']
          ++ map ((indent <>) . (<> char7 ';')) rest
          ++ [string7 "};"]
-    rest = [ string7 "relocated" <> equals <> string7 (if relocated then "true" else "false")
-           , string7 "deps" <> equals <> char7 '[' <> deps <> char7 ']'
-           ] ++ md5 "default" containermd5
-             ++ md5 "src" srccontainermd5
-             ++ md5 "doc" doccontainermd5
-    md5 str = maybeToList . fmap (\m -> string7 "md5." <> string7 str <> equals <> quote m)
+    rest = [ string7 "relocated" <> equals <> string7 (map toLower $ show relocated)
+           , string7 "depend" <> equals <> char7 '[' <> deps <> char7 ']'
+           ] ++ md5 "containermd5" containermd5
+             ++ md5 "srccontainermd5" srccontainermd5
+             ++ md5 "doccontainermd5" doccontainermd5
+    md5 str = maybeToList . fmap (\m -> string7 str <> equals <> quote m)
     deps = foldr (\l r -> quote (archify l) <> char7 ' '  <> r) mempty depend
     archify str = case splitAt (length str - 4) str of
         (left, "ARCH") -> left ++ "${arch}"

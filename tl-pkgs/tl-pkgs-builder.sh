@@ -8,7 +8,9 @@ for kind in $default $src $doc; do
     fi
 done
 
-for file in $(find $out * \( -type f -a -executable \)); do
-    patchelf --set-interpreter $glibc$(patchelf --print-interpreter $file) $file
+for file in $(find $out -type f); do
+    if test $(hexdump -n 4 -e '"%x"' $file) = 464c457f; then
+        patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" $file
+    fi
 done
 
