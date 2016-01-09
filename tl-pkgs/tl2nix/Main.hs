@@ -12,16 +12,19 @@ import           Data.Maybe
 import           Data.Monoid
 import           System.IO
 
+import qualified Pipes as P
+import qualified Pipes.ByteString as PB
+import qualified Pipes.Parse as PP
+import qualified Pipes.Attoparsec as PA
+
 data Package = Package String PkgBody deriving Show
 
 data PkgBody = PkgBody { relocated :: Bool
                        , depend :: [String]
-                       , containermd5 :: Maybe MD5
-                       , srccontainermd5 :: Maybe MD5
-                       , doccontainermd5 :: Maybe MD5
+                       , containermd5 :: Maybe String
+                       , srccontainermd5 :: Maybe String
+                       , doccontainermd5 :: Maybe String
                        } deriving Show
-
-type MD5 = String
 
 -- key, value, and maybe files
 data Entry = Entry String String [String] deriving Show
@@ -46,33 +49,12 @@ buildPackage (Package name (PkgBody{..})) = mconcat $ map ((indent <>) . (<> cha
         (left, "ARCH") -> left ++ "${arch}"
         _ -> str
 
-pprintEntry :: Entry -> IO ()
-pprintEntry (Entry key value files) = do
-    putStr key
-    putChar ' '
-    putStr value
-    putChar '\n'
-    mapM_ (\file -> putChar ' ' >> putStr file >> putChar '\n') files
-
 entry :: Parser Entry
 entry = Entry <$> (many1 (satisfy inValue) <* char ' ')
               <*> manyTill anyChar endOfLine
               <*> many' (char ' ' *> manyTill anyChar (char '\n'))
   where
-    inValue = fmap or $ sequence [ (==) '-'
-                                 , isDigit
-                                 , isAlpha_ascii
-                                 ]
-
-package :: Parser Package
-package = do
-    entries <- many' entry
-    case toPackage entries of
-        Just package -> return package
-        Nothing -> fail "package had no name"
-
-tlpdb :: Parser [[Entry]]
-tlpdb = many' entry `sepBy` string (C.pack "\n")
+    inValue = (||) <$> isDigit <*> ((||) <$> isAlpha_ascii <*> (==) '-')
 
 exactlyOne :: [a] -> Maybe a
 exactlyOne [a] = Just a
@@ -98,18 +80,39 @@ toPackage _ = Nothing
 main :: IO ()
 main = do
     putStrLn "arch: {"
-    getPackages (Partial (parse package))
+    maybe (return ()) (hPutStrLn stderr) <$> PP.evalStateT parser PB.stdin
     putStrLn "}"
   where
-    getPackages' = getPackages $ Partial $ parse package
-    getPackages (Fail _ _ reason) = putStrLn reason
-    getPackages (Partial f) = do
-        eof <- hIsEOF stdin
-        if eof
-         then return ()
-         else do
-            line <- B.hGetLine stdin
-            getPackages (f (line <> C.pack "\n"))
-    getPackages (Done i r) = do
-        hPutBuilder stdout (buildPackage r)
-        getPackages'
+    parser :: PP.Parser B.ByteString IO (Maybe String)
+    parser = do
+        parsed <- PA.parse (many1 entry <* endOfLine)
+        case parsed of
+            Nothing -> return Nothing
+            Just (Left (PA.ParsingError _ msg)) -> return (Just msg)
+            Just (Right entries) -> case toPackage entries of
+                Nothing -> return (Just "malformed package")
+                Just pkg -> PP.lift (hPutBuilder stdout (buildPackage pkg)) >> parser
+
+-- main :: IO ()
+-- main = putStrLn "arch: {" >> getPackages' >> putStrLn "}"
+--   where
+--     getPackages' = getPackages (Partial (parse package))
+--     getPackages (Fail _ _ reason) = putStrLn reason
+--     getPackages (Partial f) = do
+--         eof <- hIsEOF stdin
+--         if eof
+--          then return ()
+--          else do
+--             line <- B.hGetLine stdin
+--             getPackages (f (line <> C.pack "\n"))
+--     getPackages (Done i r) = do
+--         hPutBuilder stdout (buildPackage r)
+--         getPackages'
+
+-- package :: Parser Package
+-- package = do
+--     entries <- many' entry
+--     case toPackage entries of
+--         Just package -> return package
+--         Nothing -> fail "package had no name"
+

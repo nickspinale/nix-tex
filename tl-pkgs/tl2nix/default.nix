@@ -4,14 +4,19 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, attoparsec, base, bytestring, stdenv }:
+  f = { mkDerivation, attoparsec, base, bytestring, pipes
+      , pipes-attoparsec, pipes-bytestring, pipes-parse, stdenv
+      }:
       mkDerivation {
         pname = "tl2nix";
         version = "0.1.0.0";
         src = ./.;
         isLibrary = false;
         isExecutable = true;
-        executableHaskellDepends = [ attoparsec base bytestring ];
+        executableHaskellDepends = [
+          attoparsec base bytestring pipes pipes-attoparsec pipes-bytestring
+          pipes-parse
+        ];
         license = stdenv.lib.licenses.mit;
       };
 
